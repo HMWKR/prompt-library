@@ -75,6 +75,8 @@ prompt-library/
 ## 새 프로젝트 추가
 
 > **상세 가이드**: 비전공자도 따라할 수 있는 자세한 설명은 [NEW-PROJECT-SETUP-GUIDE.md](docs/NEW-PROJECT-SETUP-GUIDE.md)를 참고하세요.
+>
+> **Claude 프롬프트 템플릿**: 새 프로젝트 시작 시 Claude에게 전달할 프롬프트는 [NEW-PROJECT-INIT-PROMPT.md](docs/NEW-PROJECT-INIT-PROMPT.md)를 복사해서 사용하세요.
 
 ### 빠른 설정 (권장)
 

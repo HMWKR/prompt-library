@@ -10,6 +10,12 @@ AI 협업 프롬프트 라이브러리 - 프롬프트 통계 분석 및 학습 �
 2. **프롬프트 분석**: Claude의 해석 (작업 유형, 제약 수준, 핵심 키워드)
 3. **최적화된 프롬프트**: 더 나은 결과를 위한 개선 버전
 
+## 대시보드
+
+**Live Dashboard**: [https://hmwkr.github.io/prompt-dashboard/](https://hmwkr.github.io/prompt-dashboard/)
+
+대시보드는 별도 저장소로 분리되었습니다: [prompt-dashboard](https://github.com/HMWKR/prompt-dashboard)
+
 ## 프로젝트 구조
 
 ```
@@ -19,11 +25,10 @@ prompt-library/
 │       ├── config.json
 │       ├── prompts/
 │       └── stats/
-├── global/             # 전체 통합 데이터
+├── global/             # 전체 통합 데이터 (대시보드 데이터 소스)
 │   ├── index.json
 │   └── stats/
 ├── docs/templates/     # 재사용 가능한 프롬프트 템플릿
-├── dashboard/          # 통계 대시보드 (GitHub Pages)
 └── scripts/            # 추출/분석 스크립트
 ```
 

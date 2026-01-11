@@ -210,8 +210,8 @@
     async function loadDashboard() {
       try {
         const [stats, index] = await Promise.all([
-          fetch('../global/stats/summary.json').then(r => r.json()),
-          fetch('../global/index.json').then(r => r.json())
+          fetch('./global/stats/summary.json').then(r => r.json()),
+          fetch('./global/index.json').then(r => r.json())
         ]);
 
         renderDashboard(stats, index);

@@ -1,0 +1,51 @@
+{
+  "id": "promptproject_f3167e0",
+  "project": "promptproject",
+  "commit": {
+    "hash": "f3167e0e7e987a1dcb377baf931e9d1870ddbcb9",
+    "shortHash": "f3167e0",
+    "author": "HMWKR",
+    "date": "2026-01-12T02:45:14+09:00",
+    "title": "chore: .gitignore 추가 및 프로젝트 초기 설정 완료",
+    "url": "https://github.com/HMWKR/promptProject/commit/f3167e0e7e987a1dcb377baf931e9d1870ddbcb9"
+  },
+  "timestamp": "2026-01-11T17:50:09.784Z",
+  "type": "chore",
+  "complexity": "complex",
+  "original": {
+    "text": "새 프로젝트 초기화 프롬프트 템플릿을 기반으로 CLAUDE.md 파일을 만들어줘.\n모든 과정은 ultrathink 모드로 진행해줘.\nGitHub(HMWKR/promptProject)와 연동하고, prompt-library에 등록해줘.",
+    "wordCount": 18,
+    "lineCount": 3
+  },
+  "analysis": {
+    "interpretation": "새 프로젝트(promptProject)에 CLAUDE.md 생성, GitHub 연동, prompt-library 프롬프트 수집 시스템에 등록",
+    "taskType": "mixed",
+    "constraintLevel": "medium",
+    "keywords": [
+      "CLAUDE.md",
+      "prompt-library",
+      "GitHub",
+      "연동",
+      "ultrathink"
+    ]
+  },
+  "outcome": {
+    "files": [
+      ".gitignore 생성 (.claude/, node_modules/ 등 제외)",
+      "CLAUDE.md 프롬프트 지침 설정 완료",
+      "prompt-library 연동 완료"
+    ]
+  },
+  "insights": [
+    "PAT(Personal Access Token)가 필요한 이유: GitHub Actions의 기본 GITHUB_TOKEN은 자기 저장소만 접근 가능. 다른 저장소(CalcLab, promptProject) 커밋을 읽으려면 명시적 권한 부여 필요.",
+    "Co-Authored-By: Claude <noreply@anthropic.com>"
+  ],
+  "tags": [
+    "chore",
+    "CLAUDE.md",
+    "prompt-library",
+    "GitHub",
+    "연동",
+    "ultrathink"
+  ]
+}

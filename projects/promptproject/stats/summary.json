@@ -1,0 +1,85 @@
+{
+  "generatedAt": "2026-01-11T17:50:09.833Z",
+  "total": 2,
+  "byProject": {
+    "promptproject": 2
+  },
+  "byType": {
+    "docs": 1,
+    "chore": 1
+  },
+  "byComplexity": {
+    "standard": 1,
+    "complex": 1
+  },
+  "byTaskType": {
+    "convergent": 1,
+    "mixed": 1
+  },
+  "avgPromptWordCount": 23,
+  "avgPromptLineCount": 3,
+  "techniqueUsage": {},
+  "keywordFrequency": {
+    "ultrathink": 2,
+    "정보": 1,
+    "일치": 1,
+    "수정": 1,
+    "분석": 1,
+    "CLAUDE.md": 1,
+    "prompt-library": 1,
+    "GitHub": 1,
+    "연동": 1
+  },
+  "tagFrequency": {
+    "ultrathink": 2,
+    "docs": 1,
+    "정보": 1,
+    "일치": 1,
+    "수정": 1,
+    "분석": 1,
+    "chore": 1,
+    "CLAUDE.md": 1,
+    "prompt-library": 1,
+    "GitHub": 1,
+    "연동": 1
+  },
+  "monthlyTrends": {
+    "2026-01": 2
+  },
+  "topInsights": [
+    {
+      "text": "문서와 실제 상태의 불일치는 혼란을 야기함.",
+      "project": "promptproject",
+      "commit": "7ddc1bd"
+    },
+    {
+      "text": "프로젝트 초기 단계에서 문서 정확성 검증이 중요.",
+      "project": "promptproject",
+      "commit": "7ddc1bd"
+    },
+    {
+      "text": "Co-Authored-By: Claude <noreply@anthropic.com>",
+      "project": "promptproject",
+      "commit": "7ddc1bd"
+    },
+    {
+      "text": "PAT(Personal Access Token)가 필요한 이유: GitHub Actions의 기본 GITHUB_TOKEN은 자기 저장소만 접근 가능. 다른 저장소(CalcLab, promptProject) 커밋을 읽으려면 명시적 권한 부여 필요.",
+      "project": "promptproject",
+      "commit": "f3167e0"
+    },
+    {
+      "text": "Co-Authored-By: Claude <noreply@anthropic.com>",
+      "project": "promptproject",
+      "commit": "f3167e0"
+    }
+  ],
+  "efficiency": {
+    "avgFilesPerPrompt": 3,
+    "byComplexity": {
+      "simple": null,
+      "standard": 11.11111111111111,
+      "complex": 16.666666666666664
+    }
+  },
+  "project": "promptproject"
+}

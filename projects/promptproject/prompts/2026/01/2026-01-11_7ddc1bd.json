@@ -1,0 +1,52 @@
+{
+  "id": "promptproject_7ddc1bd",
+  "project": "promptproject",
+  "commit": {
+    "hash": "7ddc1bd1c10815cdf59541d3dfc8fe97c4d64f4e",
+    "shortHash": "7ddc1bd",
+    "author": "HMWKR",
+    "date": "2026-01-12T02:48:20+09:00",
+    "title": "docs: CLAUDE.md 실제 정보와 일치하도록 수정",
+    "url": "https://github.com/HMWKR/promptProject/commit/7ddc1bd1c10815cdf59541d3dfc8fe97c4d64f4e"
+  },
+  "timestamp": "2026-01-11T17:50:09.790Z",
+  "type": "docs",
+  "complexity": "standard",
+  "original": {
+    "text": "지금 정보와 claude.md에 되어 있는 정보와 틀린 부분이 있다면 수정해줘\n예를 들어 깃허브 주소라던지 내가 말한걸 분석을 하고 수정을 해줘\n이 모든 과정은 ultrathink 모드로 진행을 해줘",
+    "wordCount": 27,
+    "lineCount": 3
+  },
+  "analysis": {
+    "interpretation": "CLAUDE.md에 기록된 정보가 실제와 다른 부분을 찾아 수정",
+    "taskType": "convergent",
+    "constraintLevel": "high",
+    "keywords": [
+      "정보",
+      "일치",
+      "수정",
+      "분석",
+      "ultrathink"
+    ]
+  },
+  "outcome": {
+    "files": [
+      "연관 시스템 테이블에 GitHub 저장소 URL 추가",
+      "폴더 구조를 실제 구조로 수정",
+      "환경 변수에 SYNC_TOKEN 추가"
+    ]
+  },
+  "insights": [
+    "문서와 실제 상태의 불일치는 혼란을 야기함.",
+    "프로젝트 초기 단계에서 문서 정확성 검증이 중요.",
+    "Co-Authored-By: Claude <noreply@anthropic.com>"
+  ],
+  "tags": [
+    "docs",
+    "정보",
+    "일치",
+    "수정",
+    "분석",
+    "ultrathink"
+  ]
+}

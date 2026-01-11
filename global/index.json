@@ -1,5 +1,37 @@
 [
   {
+    "id": "promptproject_7ddc1bd",
+    "project": "promptproject",
+    "date": "2026-01-12T02:48:20+09:00",
+    "title": "docs: CLAUDE.md 실제 정보와 일치하도록 수정",
+    "type": "docs",
+    "complexity": "standard",
+    "tags": [
+      "docs",
+      "정보",
+      "일치",
+      "수정",
+      "분석",
+      "ultrathink"
+    ]
+  },
+  {
+    "id": "promptproject_f3167e0",
+    "project": "promptproject",
+    "date": "2026-01-12T02:45:14+09:00",
+    "title": "chore: .gitignore 추가 및 프로젝트 초기 설정 완료",
+    "type": "chore",
+    "complexity": "complex",
+    "tags": [
+      "chore",
+      "CLAUDE.md",
+      "prompt-library",
+      "GitHub",
+      "연동",
+      "ultrathink"
+    ]
+  },
+  {
     "id": "calclab_e01efb9",
     "project": "calclab",
     "date": "2026-01-12T00:33:01+09:00",

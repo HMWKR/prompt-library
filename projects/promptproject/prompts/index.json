@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "id": "promptproject_f3167e0",
+    "date": "2026-01-12T02:45:14+09:00",
+    "title": "chore: .gitignore 추가 및 프로젝트 초기 설정 완료",
+    "type": "chore",
+    "complexity": "complex",
+    "path": "2026/01/2026-01-11_f3167e0.json"
+  },
+  {
+    "id": "promptproject_7ddc1bd",
+    "date": "2026-01-12T02:48:20+09:00",
+    "title": "docs: CLAUDE.md 실제 정보와 일치하도록 수정",
+    "type": "docs",
+    "complexity": "standard",
+    "path": "2026/01/2026-01-11_7ddc1bd.json"
+  }
+]

@@ -35,7 +35,7 @@ jobs:
           repository: ${{ github.repository_owner }}/${{ matrix.project.repo }}
           path: source-${{ matrix.project.name }}
           fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.SYNC_TOKEN }}
 
       - name: Extract prompts
         working-directory: source-${{ matrix.project.name }}

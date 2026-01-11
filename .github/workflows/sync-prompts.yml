@@ -16,13 +16,6 @@ permissions:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      max-parallel: 1
-      matrix:
-        project:
-          - { name: "calclab", repo: "CalcLab" }
-          - { name: "promptproject", repo: "promptProject" }
 
     steps:
       - name: Checkout prompt-library
@@ -33,46 +26,57 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Checkout source project
+      # CalcLab 동기화
+      - name: Checkout CalcLab
         uses: actions/checkout@v4
         with:
-          repository: ${{ github.repository_owner }}/${{ matrix.project.repo }}
-          path: source-${{ matrix.project.name }}
+          repository: HMWKR/CalcLab
+          path: source-calclab
           fetch-depth: 0
           token: ${{ secrets.SYNC_TOKEN }}
 
-      - name: Extract prompts
-        working-directory: source-${{ matrix.project.name }}
+      - name: Extract prompts from CalcLab
+        working-directory: source-calclab
         run: |
-          # 마지막 동기화 커밋 확인
-          LAST_SYNC_FILE="../projects/${{ matrix.project.name }}/last_sync.txt"
-
+          LAST_SYNC_FILE="../projects/calclab/last_sync.txt"
           if [ -f "$LAST_SYNC_FILE" ]; then
             LAST_SYNC=$(cat "$LAST_SYNC_FILE")
             echo "Last sync: $LAST_SYNC"
-            COMMITS=$(git log --format=%H --reverse $LAST_SYNC..HEAD 2>/dev/null || git log --format=%H --reverse)
           else
             echo "First sync - processing all commits"
-            COMMITS=$(git log --format=%H --reverse)
           fi
-
-          if [ -z "$COMMITS" ]; then
-            echo "No new commits to process"
-            exit 0
-          fi
-
-          # 각 커밋에서 프롬프트 추출
-          node ../scripts/extract-prompts.js ${{ matrix.project.name }}
-
-          # 마지막 커밋 해시 저장
+          node ../scripts/extract-prompts.js calclab
           git log -1 --format=%H > "$LAST_SYNC_FILE"
 
+      # promptProject 동기화
+      - name: Checkout promptProject
+        uses: actions/checkout@v4
+        with:
+          repository: HMWKR/promptProject
+          path: source-promptproject
+          fetch-depth: 0
+          token: ${{ secrets.SYNC_TOKEN }}
+
+      - name: Extract prompts from promptProject
+        working-directory: source-promptproject
+        run: |
+          LAST_SYNC_FILE="../projects/promptproject/last_sync.txt"
+          if [ -f "$LAST_SYNC_FILE" ]; then
+            LAST_SYNC=$(cat "$LAST_SYNC_FILE")
+            echo "Last sync: $LAST_SYNC"
+          else
+            echo "First sync - processing all commits"
+          fi
+          node ../scripts/extract-prompts.js promptproject
+          git log -1 --format=%H > "$LAST_SYNC_FILE"
+
+      # 통계 생성 (한 번만)
       - name: Generate stats
         run: node scripts/generate-stats.js
 
+      # 커밋 및 푸시
       - name: Commit and push
         run: |
-          # source-* 폴더 제거 (커밋에 포함되지 않도록)
           rm -rf source-*
 
           git config user.name "Prompt Sync Bot"
@@ -82,7 +86,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "sync: Update prompts from ${{ matrix.project.name }} [skip ci]"
-            git pull --rebase origin main
+            git commit -m "sync: Update prompts from all projects [skip ci]"
             git push
           fi

@@ -1,0 +1,49 @@
+{
+  "generatedAt": "2026-01-11T21:45:00Z",
+  "total": 1,
+  "byProject": {
+    "calclab": 1
+  },
+  "byType": {
+    "docs": 1
+  },
+  "byComplexity": {
+    "complex": 1
+  },
+  "byTaskType": {
+    "mixed": 1
+  },
+  "avgPromptWordCount": 42,
+  "avgPromptLineCount": 1,
+  "techniqueUsage": {
+    "chain-of-thought": 1,
+    "negative-constraints": 1
+  },
+  "keywordFrequency": {
+    "자세하게": 1,
+    "최적의 프롬프트": 1,
+    "ultrathink": 1
+  },
+  "tagFrequency": {
+    "docs": 1,
+    "prompt-engineering": 1,
+    "documentation": 1,
+    "ultrathink": 1
+  },
+  "monthlyTrends": {
+    "2026-01": 1
+  },
+  "topInsights": [
+    {
+      "text": "프롬프트 분석을 통해 Claude의 해석 과정을 투명화",
+      "project": "calclab",
+      "commit": "cb8b8a3"
+    },
+    {
+      "text": "최적화된 프롬프트는 향후 유사 작업 시 재사용 가능한 라이브러리로 축적",
+      "project": "calclab",
+      "commit": "cb8b8a3"
+    }
+  ],
+  "efficiency": null
+}

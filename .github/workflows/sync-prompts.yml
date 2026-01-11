@@ -1,0 +1,77 @@
+name: Sync Prompts
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # 6시간마다
+  workflow_dispatch:
+    inputs:
+      project:
+        description: 'Sync specific project (or "all")'
+        required: false
+        default: 'all'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        project: [calclab]
+
+    steps:
+      - name: Checkout prompt-library
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Checkout source project
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/${{ matrix.project }}
+          path: source-${{ matrix.project }}
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract prompts
+        working-directory: source-${{ matrix.project }}
+        run: |
+          # 마지막 동기화 커밋 확인
+          LAST_SYNC_FILE="../projects/${{ matrix.project }}/last_sync.txt"
+
+          if [ -f "$LAST_SYNC_FILE" ]; then
+            LAST_SYNC=$(cat "$LAST_SYNC_FILE")
+            echo "Last sync: $LAST_SYNC"
+            COMMITS=$(git log --format=%H --reverse $LAST_SYNC..HEAD 2>/dev/null || git log --format=%H --reverse)
+          else
+            echo "First sync - processing all commits"
+            COMMITS=$(git log --format=%H --reverse)
+          fi
+
+          if [ -z "$COMMITS" ]; then
+            echo "No new commits to process"
+            exit 0
+          fi
+
+          # 각 커밋에서 프롬프트 추출
+          node ../scripts/extract-prompts.js ${{ matrix.project }}
+
+          # 마지막 커밋 해시 저장
+          git log -1 --format=%H > "$LAST_SYNC_FILE"
+
+      - name: Generate stats
+        run: node scripts/generate-stats.js
+
+      - name: Commit and push
+        run: |
+          git config user.name "Prompt Sync Bot"
+          git config user.email "bot@noreply.github.com"
+          git add .
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "sync: Update prompts from ${{ matrix.project }} [skip ci]"
+            git push
+          fi

@@ -1,0 +1,47 @@
+{
+  "id": "calclab_cb8b8a3",
+  "project": "calclab",
+  "commit": {
+    "hash": "cb8b8a3",
+    "shortHash": "cb8b8a3",
+    "author": "Claude & User",
+    "date": "2026-01-11T21:30:00+09:00",
+    "title": "docs: 커밋 메시지 3단계 프롬프트 문서화 구조 도입",
+    "url": "https://github.com/HMWKR/CalcLab/commit/cb8b8a3"
+  },
+  "timestamp": "2026-01-11T21:45:00Z",
+  "type": "docs",
+  "complexity": "complex",
+  "original": {
+    "text": "커밋 메시지 같은 경우 이 산출물에 도달한 프롬프트 <<< 를 좀 더 자세하게 적을 수 있게끔 했으면 좋겠어 추가적으로 이 산출물에 도달한 프롬프트를 추가롤 너 생각하는 이 산출물에 도달하기 위해서 최적의 프롬프트를 추가로 적었으면 좋겠고 이 모든 과정은 ultrathink 모드로 진행을 해줘",
+    "wordCount": 42,
+    "lineCount": 1
+  },
+  "analysis": {
+    "interpretation": "커밋 메시지의 프롬프트 섹션을 확장하여 원본/분석/최적화 3단계로 구조화",
+    "taskType": "mixed",
+    "constraintLevel": "medium",
+    "keywords": ["자세하게", "최적의 프롬프트", "ultrathink"]
+  },
+  "optimized": {
+    "text": "## 목표\nCLAUDE.md 섹션 12 커밋 메시지 규칙을 확장해:\n\n## 요구사항\n1. \"이 산출물에 도달한 프롬프트\" → \"프롬프트 기록\"으로 변경\n2. 3단계 구조 도입:\n   - 원본 프롬프트 (사용자 실제 입력)\n   - 프롬프트 분석 (Claude 해석)\n   - 최적화된 프롬프트 (개선 버전)\n3. 작업 복잡도별 적용 기준 추가\n\n## 참고\n- docs/PROMPT_ENGINEERING_GUIDE.md의 기법 연계\n- 단순 작업에선 생략 가능하도록 유연성 확보",
+    "improvements": [
+      "구체적인 산출물 구조 명시",
+      "3단계 구조 세부 항목 나열",
+      "기존 문서와의 연계 언급"
+    ],
+    "techniques": ["chain-of-thought", "negative-constraints"]
+  },
+  "outcome": {
+    "files": [
+      "CLAUDE.md 섹션 12 전체 재구성 (+127 라인)",
+      "docs/CLAUDE_TEMPLATE.md 동일 구조 반영 (+59 라인)"
+    ],
+    "linesChanged": 186
+  },
+  "insights": [
+    "프롬프트 분석을 통해 Claude의 해석 과정을 투명화",
+    "최적화된 프롬프트는 향후 유사 작업 시 재사용 가능한 라이브러리로 축적"
+  ],
+  "tags": ["docs", "prompt-engineering", "documentation", "ultrathink"]
+}

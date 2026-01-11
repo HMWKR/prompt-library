@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "prompt.schema.json",
+  "title": "Prompt Record",
+  "description": "AI 협업 프롬프트 기록 스키마",
+  "type": "object",
+  "required": ["id", "project", "commit", "timestamp", "type", "original"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "고유 식별자 (project_commit-hash)",
+      "pattern": "^[a-z0-9-]+_[a-f0-9]{7,40}$"
+    },
+    "project": {
+      "type": "string",
+      "description": "프로젝트명"
+    },
+    "commit": {
+      "type": "object",
+      "description": "커밋 정보",
+      "properties": {
+        "hash": { "type": "string" },
+        "shortHash": { "type": "string" },
+        "author": { "type": "string" },
+        "date": { "type": "string", "format": "date-time" },
+        "title": { "type": "string" },
+        "url": { "type": "string", "format": "uri" }
+      },
+      "required": ["hash", "date", "title"]
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "프롬프트 추출 시간"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["feat", "fix", "refactor", "perf", "docs", "test", "chore", "improve"],
+      "description": "커밋 타입 (Conventional Commits)"
+    },
+    "complexity": {
+      "type": "string",
+      "enum": ["simple", "standard", "complex"],
+      "description": "작업 복잡도"
+    },
+    "original": {
+      "type": "object",
+      "description": "원본 프롬프트",
+      "properties": {
+        "text": { "type": "string" },
+        "wordCount": { "type": "integer" },
+        "lineCount": { "type": "integer" }
+      },
+      "required": ["text"]
+    },
+    "analysis": {
+      "type": "object",
+      "description": "프롬프트 분석 (선택)",
+      "properties": {
+        "interpretation": { "type": "string" },
+        "taskType": {
+          "type": "string",
+          "enum": ["convergent", "divergent", "mixed"]
+        },
+        "constraintLevel": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "keywords": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "optimized": {
+      "type": "object",
+      "description": "최적화된 프롬프트 (선택)",
+      "properties": {
+        "text": { "type": "string" },
+        "improvements": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "techniques": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["chain-of-thought", "few-shot", "role-prompting",
+                     "negative-constraints", "self-verification"]
+          }
+        }
+      }
+    },
+    "outcome": {
+      "type": "object",
+      "description": "산출물 정보",
+      "properties": {
+        "files": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "linesChanged": { "type": "integer" },
+        "testsAdded": { "type": "integer" }
+      }
+    },
+    "insights": {
+      "type": "array",
+      "description": "핵심 통찰",
+      "items": { "type": "string" }
+    },
+    "tags": {
+      "type": "array",
+      "description": "분류 태그",
+      "items": { "type": "string" }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "id": "calclab_cb8b8a3",
+    "project": "calclab",
+    "date": "2026-01-11T21:30:00+09:00",
+    "title": "docs: 커밋 메시지 3단계 프롬프트 문서화 구조 도입",
+    "type": "docs",
+    "complexity": "complex",
+    "tags": ["docs", "prompt-engineering", "documentation", "ultrathink"]
+  }
+]

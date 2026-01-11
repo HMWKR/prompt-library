@@ -1,0 +1,55 @@
+name: Generate Stats
+
+on:
+  push:
+    paths:
+      - 'projects/**/prompts/**'
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate stats
+        run: node scripts/generate-stats.js
+
+      - name: Update README stats
+        run: |
+          if [ -f "global/stats/summary.json" ]; then
+            TOTAL=$(jq '.total' global/stats/summary.json)
+            PROJECTS=$(jq '.byProject | keys | length' global/stats/summary.json)
+            AVG_WORDS=$(jq '.avgPromptWordCount' global/stats/summary.json)
+
+            STATS_CONTENT="| 메트릭 | 값 |
+          |--------|-----|
+          | 총 프롬프트 | $TOTAL |
+          | 프로젝트 수 | $PROJECTS |
+          | 평균 단어 수 | $AVG_WORDS |
+
+          *마지막 업데이트: $(date -u +"%Y-%m-%d %H:%M UTC")*"
+
+            # README 업데이트
+            sed -i '/<!-- STATS_START -->/,/<!-- STATS_END -->/c\<!-- STATS_START -->\n'"$STATS_CONTENT"'\n<!-- STATS_END -->' README.md
+          fi
+
+      - name: Commit and push
+        run: |
+          git config user.name "Stats Bot"
+          git config user.email "bot@noreply.github.com"
+          git add .
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "stats: Update statistics [skip ci]"
+            git push
+          fi

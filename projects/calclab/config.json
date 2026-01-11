@@ -1,0 +1,24 @@
+{
+  "name": "calclab",
+  "displayName": "CalcLab",
+  "description": "SI 차원 분석 기반 공학 계산기",
+  "repository": "HMWKR/CalcLab",
+  "branch": "main",
+  "syncEnabled": true,
+  "createdAt": "2026-01-11T00:00:00Z",
+  "promptFormat": {
+    "originalMarker": "### 원본 프롬프트",
+    "analysisMarker": "### 프롬프트 분석",
+    "optimizedMarker": "### 최적화된 프롬프트"
+  },
+  "tags": {
+    "auto": true,
+    "commitTypeAsTag": true,
+    "customRules": [
+      { "match": "ultrathink", "tag": "deep-analysis" },
+      { "match": "테스트", "tag": "testing" },
+      { "match": "성능", "tag": "performance" },
+      { "match": "리팩토링", "tag": "refactoring" }
+    ]
+  }
+}

@@ -18,6 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
+      max-parallel: 1
       matrix:
         project:
           - { name: "calclab", repo: "CalcLab" }
@@ -82,5 +83,6 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "sync: Update prompts from ${{ matrix.project.name }} [skip ci]"
+            git pull --rebase origin main
             git push
           fi

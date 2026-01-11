@@ -14,8 +14,11 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        project: [calclab, promptproject]
+        project:
+          - { name: "calclab", repo: "CalcLab" }
+          - { name: "promptproject", repo: "promptProject" }
 
     steps:
       - name: Checkout prompt-library
@@ -29,16 +32,16 @@ jobs:
       - name: Checkout source project
         uses: actions/checkout@v4
         with:
-          repository: ${{ github.repository_owner }}/${{ matrix.project }}
-          path: source-${{ matrix.project }}
+          repository: ${{ github.repository_owner }}/${{ matrix.project.repo }}
+          path: source-${{ matrix.project.name }}
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Extract prompts
-        working-directory: source-${{ matrix.project }}
+        working-directory: source-${{ matrix.project.name }}
         run: |
           # 마지막 동기화 커밋 확인
-          LAST_SYNC_FILE="../projects/${{ matrix.project }}/last_sync.txt"
+          LAST_SYNC_FILE="../projects/${{ matrix.project.name }}/last_sync.txt"
 
           if [ -f "$LAST_SYNC_FILE" ]; then
             LAST_SYNC=$(cat "$LAST_SYNC_FILE")
@@ -55,7 +58,7 @@ jobs:
           fi
 
           # 각 커밋에서 프롬프트 추출
-          node ../scripts/extract-prompts.js ${{ matrix.project }}
+          node ../scripts/extract-prompts.js ${{ matrix.project.name }}
 
           # 마지막 커밋 해시 저장
           git log -1 --format=%H > "$LAST_SYNC_FILE"
@@ -72,6 +75,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "sync: Update prompts from ${{ matrix.project }} [skip ci]"
+            git commit -m "sync: Update prompts from ${{ matrix.project.name }} [skip ci]"
             git push
           fi

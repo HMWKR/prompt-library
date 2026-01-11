@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-11T17:37:35.716Z",
+  "generatedAt": "2026-01-11T17:37:35.717Z",
   "total": 3,
   "byProject": {
     "calclab": 3
@@ -94,5 +94,6 @@
       "standard": null,
       "complex": 7.855107855107856
     }
-  }
+  },
+  "project": "calclab"
 }

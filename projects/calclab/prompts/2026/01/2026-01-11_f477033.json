@@ -1,0 +1,64 @@
+{
+  "id": "calclab_f477033",
+  "project": "calclab",
+  "commit": {
+    "hash": "f47703358f335460a97afcf170dd50620e5ebe81",
+    "shortHash": "f477033",
+    "author": "HMWKR",
+    "date": "2026-01-11T21:56:02+09:00",
+    "title": "docs: 프롬프트 라이브러리 시스템 문서화 (section 12-2)",
+    "url": "https://github.com/HMWKR/CalcLab/commit/f47703358f335460a97afcf170dd50620e5ebe81"
+  },
+  "timestamp": "2026-01-11T17:37:35.658Z",
+  "type": "docs",
+  "complexity": "complex",
+  "original": {
+    "text": "이런구조로 다른 프로젝트도 하고 싶어서 그런데 claude.md 지침에다가 추가해줘\nclaude_Template.md 에다가도 추가를 해주고 이 모든 과정은 ultrathink 모드로 진행을 해줘\n추가적으로 다음 단계도 이어서 진행을 해주고",
+    "wordCount": 26,
+    "lineCount": 3
+  },
+  "analysis": {
+    "interpretation": "prompt-library 시스템을 다른 프로젝트에서도 재사용할 수 있도록 CLAUDE.md와 템플릿 문서에 가이드 추가",
+    "taskType": "mixed",
+    "constraintLevel": "medium",
+    "keywords": [
+      "다른",
+      "프로젝트",
+      "claude.md",
+      "지침",
+      "Template",
+      "다음",
+      "단계"
+    ]
+  },
+  "optimized": {
+    "text": "CLAUDE.md와 docs/CLAUDE_TEMPLATE.md에 프롬프트 라이브러리 시스템 연결 가이드를\nsection 12-2로 추가해줘. 포함할 내용:\n1. 시스템 개요 및 아키텍처 다이어그램\n2. 저장소 구조\n3. 새 프로젝트 연결 방법 (step-by-step)\n4. 통계 분석 항목\n5. 대시보드 접속 정보\n\n추가로 GitHub Pages 활성화 및 대시보드 배포 테스트까지 진행.",
+    "improvements": [
+      "문서 위치와 섹션 번호 명시",
+      "포함할 내용 구체적 나열",
+      "후속 작업(GitHub Pages) 명시"
+    ],
+    "techniques": [
+      "chain-of-thought"
+    ]
+  },
+  "outcome": {
+    "files": [
+      "CLAUDE.md: section 12-2 프롬프트 라이브러리 시스템 추가",
+      "docs/CLAUDE_TEMPLATE.md: 동일 내용 추가 (다른 프로젝트 재사용용)"
+    ]
+  },
+  "insights": [
+    "prompt-library 시스템을 템플릿화하여 새 프로젝트에서 config.json만 추가하면",
+    "자동으로 프롬프트 수집이 시작되는 구조 완성",
+    "🤖 Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
+  ],
+  "tags": [
+    "docs",
+    "다른",
+    "프로젝트",
+    "claude.md",
+    "지침",
+    "Template"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "promptproject",
+  "displayName": "promptProject",
+  "description": "새 프로젝트 초기화 시 프롬프트 수집 시스템을 자동으로 설정하는 템플릿 및 가이드 시스템",
+  "repository": "HMWKR/promptProject",
+  "branch": "main",
+  "syncEnabled": true,
+  "createdAt": "2026-01-12T00:00:00Z",
+  "promptFormat": {
+    "originalMarker": "### 원본 프롬프트",
+    "analysisMarker": "### 프롬프트 분석",
+    "optimizedMarker": "### 최적화된 프롬프트"
+  },
+  "tags": {
+    "auto": true,
+    "commitTypeAsTag": true,
+    "customRules": [
+      { "match": "ultrathink", "tag": "deep-analysis" },
+      { "match": "테스트", "tag": "testing" },
+      { "match": "템플릿", "tag": "template" },
+      { "match": "CLAUDE.md", "tag": "claude-setup" }
+    ]
+  }
+}

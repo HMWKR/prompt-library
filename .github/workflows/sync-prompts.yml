@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        project: [calclab]
+        project: [calclab, promptproject]
 
     steps:
       - name: Checkout prompt-library

@@ -74,6 +74,35 @@ prompt-library/
 
 ## 새 프로젝트 추가
 
+### 빠른 설정 (권장)
+
+```bash
+cd prompt-library
+./scripts/setup-project.sh <project-name> [github-username] [--with-claude-md <path>]
+```
+
+**예시:**
+
+```bash
+# 기본 사용법
+./scripts/setup-project.sh my-new-app
+
+# GitHub 사용자명 지정
+./scripts/setup-project.sh my-new-app HMWKR
+
+# CLAUDE.md 템플릿도 함께 복사
+./scripts/setup-project.sh my-new-app HMWKR --with-claude-md /path/to/new-project
+```
+
+**스크립트가 자동으로 수행하는 작업:**
+
+1. `projects/<name>/prompts/` 폴더 생성
+2. `projects/<name>/config.json` 생성
+3. `sync-prompts.yml` 업데이트 안내
+4. (선택) 새 프로젝트에 CLAUDE.md 템플릿 복사
+
+### 수동 설정
+
 1. `projects/<project-name>/config.json` 생성:
 
 ```json
@@ -84,7 +113,9 @@ prompt-library/
 }
 ```
 
-2. GitHub Actions가 자동으로 프롬프트를 수집합니다.
+2. `.github/workflows/sync-prompts.yml`의 matrix에 프로젝트 추가
+
+3. GitHub Actions가 자동으로 프롬프트를 수집합니다.
 
 ## 분석 도구
 

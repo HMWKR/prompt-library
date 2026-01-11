@@ -74,6 +74,8 @@ prompt-library/
 
 ## 새 프로젝트 추가
 
+> **상세 가이드**: 비전공자도 따라할 수 있는 자세한 설명은 [NEW-PROJECT-SETUP-GUIDE.md](docs/NEW-PROJECT-SETUP-GUIDE.md)를 참고하세요.
+
 ### 빠른 설정 (권장)
 
 ```bash

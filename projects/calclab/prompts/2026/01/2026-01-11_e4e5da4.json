@@ -1,0 +1,49 @@
+{
+  "id": "calclab_e4e5da4",
+  "project": "calclab",
+  "commit": {
+    "hash": "e4e5da47be77c081c0e87e0bd2dfcdd51e104e8c",
+    "shortHash": "e4e5da4",
+    "author": "HMWKR",
+    "date": "2026-01-12T04:34:06+09:00",
+    "title": "feat: 레이아웃 반응형 브레이크포인트 적용",
+    "url": "https://github.com/HMWKR/CalcLab/commit/e4e5da47be77c081c0e87e0bd2dfcdd51e104e8c"
+  },
+  "timestamp": "2026-01-12T02:10:33.316Z",
+  "type": "feat",
+  "complexity": "complex",
+  "original": {
+    "text": "P1 이슈: Sidebar(320) + AI(320) = 메인 콘텐츠 128px만 남는 문제. xl:/2xl: 대형 화면에서 좌측 정렬되는 문제도 해결해줘.",
+    "wordCount": 18,
+    "lineCount": 1
+  },
+  "analysis": {
+    "interpretation": "고정 너비 패널들이 중간 화면에서 콘텐츠 영역을 압박하는 문제 해결",
+    "taskType": "convergent",
+    "constraintLevel": "high",
+    "keywords": [
+      "P1",
+      "고정",
+      "너비",
+      "대형",
+      "화면",
+      "좌측",
+      "정렬"
+    ]
+  },
+  "outcome": {
+    "files": [
+      "Header.tsx: 높이/패딩 점진적 확대 (h-20 sm:h-24 lg:h-28)",
+      "Sidebar.tsx: 너비/패딩 반응형 (w-64 lg:w-80), 프로젝트 버튼 터치 타겟 44px",
+      "App.tsx: 컨테이너 max-width 확장 (xl:max-w-[90rem] 2xl:max-w-[100rem])"
+    ]
+  },
+  "tags": [
+    "feat",
+    "P1",
+    "고정",
+    "너비",
+    "대형",
+    "화면"
+  ]
+}

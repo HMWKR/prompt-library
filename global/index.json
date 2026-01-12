@@ -1,5 +1,177 @@
 [
   {
+    "id": "calclab_c32da8b",
+    "project": "calclab",
+    "date": "2026-01-12T04:56:56+09:00",
+    "title": "feat(ci): Husky + Commitlint 커밋 메시지 자동 검증 시스템 구축",
+    "type": "feat",
+    "complexity": "complex",
+    "tags": [
+      "feat",
+      "자동",
+      "검증",
+      "Husky",
+      "Commitlint",
+      "최적화된"
+    ]
+  },
+  {
+    "id": "calclab_3ef8d98",
+    "project": "calclab",
+    "date": "2026-01-12T04:37:24+09:00",
+    "title": "feat(a11y): 모달 스크롤 잠금 훅 및 CRLF 정규화",
+    "type": "feat",
+    "complexity": "complex",
+    "tags": [
+      "feat",
+      "참조",
+      "카운터",
+      "중첩",
+      "모달",
+      "스크롤"
+    ]
+  },
+  {
+    "id": "calclab_1a7f36e",
+    "project": "calclab",
+    "date": "2026-01-12T04:37:06+09:00",
+    "title": "feat(modals): 모달/유틸리티 컴포넌트 반응형화",
+    "type": "feat",
+    "complexity": "complex",
+    "tags": [
+      "feat",
+      "모달",
+      "오버레이",
+      "모바일",
+      "UX"
+    ]
+  },
+  {
+    "id": "calclab_cf44842",
+    "project": "calclab",
+    "date": "2026-01-12T04:36:46+09:00",
+    "title": "feat(quick-access): QuickAccessPanel 하위 컴포넌트 반응형화",
+    "type": "feat",
+    "complexity": "complex",
+    "tags": [
+      "feat",
+      "터치",
+      "타겟",
+      "44px",
+      "접근성"
+    ]
+  },
+  {
+    "id": "calclab_e90d57f",
+    "project": "calclab",
+    "date": "2026-01-12T04:36:28+09:00",
+    "title": "feat(onboarding): 17개 온보딩 컴포넌트 반응형화",
+    "type": "feat",
+    "complexity": "complex",
+    "tags": [
+      "feat",
+      "P0",
+      "신규",
+      "사용자",
+      "온보딩",
+      "불가"
+    ]
+  },
+  {
+    "id": "calclab_d3b7850",
+    "project": "calclab",
+    "date": "2026-01-12T04:36:09+09:00",
+    "title": "feat(workspace): CalcLineInput, ResultDisplay, VirtualCalcList 반응형화",
+    "type": "feat",
+    "complexity": "complex",
+    "tags": [
+      "feat",
+      "10점",
+      "이상",
+      "claude.md",
+      "지침",
+      "준수"
+    ]
+  },
+  {
+    "id": "calclab_b03fd20",
+    "project": "calclab",
+    "date": "2026-01-12T04:34:26+09:00",
+    "title": "feat: Settings/Keybinding 반응형 그리드 적용",
+    "type": "feat",
+    "complexity": "complex",
+    "tags": [
+      "feat",
+      "P1",
+      "P2",
+      "grid-cols-4",
+      "터치",
+      "타겟"
+    ]
+  },
+  {
+    "id": "calclab_e4e5da4",
+    "project": "calclab",
+    "date": "2026-01-12T04:34:06+09:00",
+    "title": "feat: 레이아웃 반응형 브레이크포인트 적용",
+    "type": "feat",
+    "complexity": "complex",
+    "tags": [
+      "feat",
+      "P1",
+      "고정",
+      "너비",
+      "대형",
+      "화면"
+    ]
+  },
+  {
+    "id": "calclab_a8b3737",
+    "project": "calclab",
+    "date": "2026-01-12T04:33:34+09:00",
+    "title": "feat: 모바일 하단 시트 UI 패턴 구현",
+    "type": "feat",
+    "complexity": "complex",
+    "tags": [
+      "feat",
+      "P0",
+      "하단",
+      "시트",
+      "모바일"
+    ]
+  },
+  {
+    "id": "calclab_f8eb077",
+    "project": "calclab",
+    "date": "2026-01-12T04:33:17+09:00",
+    "title": "feat: 반응형 디자인 토큰 시스템 추가",
+    "type": "feat",
+    "complexity": "complex",
+    "tags": [
+      "feat",
+      "매직",
+      "넘버",
+      "상수화",
+      "10점",
+      "이상"
+    ]
+  },
+  {
+    "id": "calclab_20e5ae9",
+    "project": "calclab",
+    "date": "2026-01-12T04:33:02+09:00",
+    "title": "build: Tailwind CSS 로컬 빌드 전환",
+    "type": "build",
+    "complexity": "complex",
+    "tags": [
+      "build",
+      "로컬",
+      "빌드",
+      "브레이크포인트",
+      "커스터마이징"
+    ]
+  },
+  {
     "id": "promptproject_7ddc1bd",
     "project": "promptproject",
     "date": "2026-01-12T02:48:20+09:00",

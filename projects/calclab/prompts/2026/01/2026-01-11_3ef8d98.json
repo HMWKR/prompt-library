@@ -1,0 +1,48 @@
+{
+  "id": "calclab_3ef8d98",
+  "project": "calclab",
+  "commit": {
+    "hash": "3ef8d980e544cb3bb0b03fe97903078f8fdaa2e1",
+    "shortHash": "3ef8d98",
+    "author": "HMWKR",
+    "date": "2026-01-12T04:37:24+09:00",
+    "title": "feat(a11y): 모달 스크롤 잠금 훅 및 CRLF 정규화",
+    "url": "https://github.com/HMWKR/CalcLab/commit/3ef8d980e544cb3bb0b03fe97903078f8fdaa2e1"
+  },
+  "timestamp": "2026-01-12T02:10:33.356Z",
+  "type": "feat",
+  "complexity": "complex",
+  "original": {
+    "text": "10점 이상을 목표로 모든 작업을 진행을 해줘 모든 과정은 claude.md 지침을 반드시 준수를하며 작업을 진행해주고 ultrathink 모드로 반드시 항상 진행해줘",
+    "wordCount": 20,
+    "lineCount": 1
+  },
+  "analysis": {
+    "interpretation": "코드 리뷰에서 발견된 P2 이슈(body 스크롤 잠금 미구현, CRLF 경고) 해결",
+    "taskType": "convergent",
+    "constraintLevel": "medium",
+    "keywords": [
+      "참조",
+      "카운터",
+      "중첩",
+      "모달",
+      "스크롤",
+      "잠금"
+    ]
+  },
+  "outcome": {
+    "files": [
+      "useBodyScrollLock.ts - 참조 카운터 기반 중첩 모달 스크롤 잠금",
+      "hooks/index.ts - useBodyScrollLock export 추가",
+      ".gitattributes - 모든 텍스트 파일 LF 정규화"
+    ]
+  },
+  "tags": [
+    "feat",
+    "참조",
+    "카운터",
+    "중첩",
+    "모달",
+    "스크롤"
+  ]
+}

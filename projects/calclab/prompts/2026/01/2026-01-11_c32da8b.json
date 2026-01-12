@@ -1,0 +1,53 @@
+{
+  "id": "calclab_c32da8b",
+  "project": "calclab",
+  "commit": {
+    "hash": "c32da8b280c5a6b1c97d5e0035e80d3e66398b8f",
+    "shortHash": "c32da8b",
+    "author": "HMWKR",
+    "date": "2026-01-12T04:56:56+09:00",
+    "title": "feat(ci): Husky + Commitlint 커밋 메시지 자동 검증 시스템 구축",
+    "url": "https://github.com/HMWKR/CalcLab/commit/c32da8b280c5a6b1c97d5e0035e80d3e66398b8f"
+  },
+  "timestamp": "2026-01-12T02:10:33.363Z",
+  "type": "feat",
+  "complexity": "complex",
+  "original": {
+    "text": "다음부터 claude.md 지침을 반드시 준수하는 커밋으로 하기 위해서는 어떠한 작업이 필요하는지에 대해서 ultrathink 모드로 생각해서 나한테 알려줘\n전체 구현을 해줘\n추가적으로 최적화된 프롬프트를 필수로 바꿔줘",
+    "wordCount": 25,
+    "lineCount": 3
+  },
+  "analysis": {
+    "interpretation": "claude.md 커밋 메시지 규칙을 자동으로 강제하는 시스템 구축, 최적화된 프롬프트를 모든 작업에서 필수로 변경",
+    "taskType": "convergent",
+    "constraintLevel": "high",
+    "keywords": [
+      "자동",
+      "검증",
+      "Husky",
+      "Commitlint",
+      "최적화된",
+      "프롬프트",
+      "필수"
+    ]
+  },
+  "outcome": {
+    "files": [
+      ".gitmessage - 커밋 메시지 템플릿",
+      "commitlint.config.cjs - claude.md 섹션 12 기반 검증 규칙",
+      ".husky/commit-msg - 커밋 시 자동 검증 Hook",
+      ".husky/pre-commit - 타입 체크 Hook",
+      ".github/workflows/commit-lint.yml - PR 커밋 메시지 CI 검증",
+      "CLAUDE.md - 섹션 12 업데이트 (최적화된 프롬프트 필수화)",
+      "package.json - husky, @commitlint/cli, @commitlint/config-conventional 추가"
+    ]
+  },
+  "tags": [
+    "feat",
+    "자동",
+    "검증",
+    "Husky",
+    "Commitlint",
+    "최적화된"
+  ]
+}

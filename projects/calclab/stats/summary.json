@@ -1,61 +1,174 @@
 {
-  "generatedAt": "2026-01-11T18:35:33.345Z",
-  "total": 3,
+  "generatedAt": "2026-01-12T02:10:34.633Z",
+  "total": 14,
   "byProject": {
-    "calclab": 3
+    "calclab": 14
   },
   "byType": {
+    "feat": 10,
+    "build": 1,
     "docs": 3
   },
   "byComplexity": {
-    "complex": 3
+    "complex": 14
   },
   "byTaskType": {
+    "convergent": 11,
     "mixed": 2,
     "divergent": 1
   },
-  "avgPromptWordCount": 29,
-  "avgPromptLineCount": 2,
+  "avgPromptWordCount": 21,
+  "avgPromptLineCount": 1,
   "techniqueUsage": {
+    "role-prompting": 1,
     "chain-of-thought": 1
   },
   "keywordFrequency": {
+    "모달": 2,
+    "모바일": 2,
+    "P0": 2,
+    "P1": 2,
+    "터치": 2,
+    "타겟": 2,
+    "44px": 2,
+    "프롬프트": 2,
+    "ultrathink": 2,
+    "10점": 2,
+    "이상": 2,
+    "claude.md": 2,
+    "지침": 2,
+    "오버레이": 1,
+    "UX": 1,
+    "로컬": 1,
+    "빌드": 1,
+    "브레이크포인트": 1,
+    "커스터마이징": 1,
+    "참조": 1,
+    "카운터": 1,
+    "중첩": 1,
+    "스크롤": 1,
+    "잠금": 1,
+    "하단": 1,
+    "시트": 1,
+    "P2": 1,
+    "grid-cols-4": 1,
+    "자동": 1,
+    "검증": 1,
+    "Husky": 1,
+    "Commitlint": 1,
+    "최적화된": 1,
+    "필수": 1,
     "자세하게": 1,
     "최적의": 1,
-    "프롬프트": 1,
-    "ultrathink": 1,
+    "접근성": 1,
+    "준수": 1,
+    "모드": 1,
     "전문적": 1,
     "용어": 1,
     "구체화": 1,
     "롤플레잉": 1,
+    "고정": 1,
+    "너비": 1,
+    "대형": 1,
+    "화면": 1,
+    "좌측": 1,
+    "정렬": 1,
+    "신규": 1,
+    "사용자": 1,
+    "온보딩": 1,
+    "불가": 1,
     "다른": 1,
     "프로젝트": 1,
-    "claude.md": 1,
-    "지침": 1,
     "Template": 1,
     "다음": 1,
-    "단계": 1
+    "단계": 1,
+    "매직": 1,
+    "넘버": 1,
+    "상수화": 1
   },
   "tagFrequency": {
+    "feat": 10,
     "docs": 3,
+    "모달": 2,
+    "모바일": 2,
+    "P0": 2,
+    "P1": 2,
+    "터치": 2,
+    "타겟": 2,
+    "10점": 2,
+    "이상": 2,
+    "claude.md": 2,
+    "지침": 2,
+    "오버레이": 1,
+    "UX": 1,
+    "build": 1,
+    "로컬": 1,
+    "빌드": 1,
+    "브레이크포인트": 1,
+    "커스터마이징": 1,
+    "참조": 1,
+    "카운터": 1,
+    "중첩": 1,
+    "스크롤": 1,
+    "하단": 1,
+    "시트": 1,
+    "P2": 1,
+    "grid-cols-4": 1,
+    "자동": 1,
+    "검증": 1,
+    "Husky": 1,
+    "Commitlint": 1,
+    "최적화된": 1,
     "자세하게": 1,
     "최적의": 1,
     "프롬프트": 1,
     "ultrathink": 1,
+    "44px": 1,
+    "접근성": 1,
+    "준수": 1,
     "전문적": 1,
     "용어": 1,
     "구체화": 1,
     "롤플레잉": 1,
+    "고정": 1,
+    "너비": 1,
+    "대형": 1,
+    "화면": 1,
+    "신규": 1,
+    "사용자": 1,
+    "온보딩": 1,
+    "불가": 1,
     "다른": 1,
     "프로젝트": 1,
-    "claude.md": 1,
-    "지침": 1,
-    "Template": 1
+    "Template": 1,
+    "매직": 1,
+    "넘버": 1,
+    "상수화": 1
   },
   "monthlyTrends": {
-    "2026-01": 3
+    "2026-01": 14
   },
   "topInsights": [
+    {
+      "text": "CDN 대비 로컬 빌드 장점: 커스텀 브레이크포인트, purge 최적화, 빌드 타임 타입 검증",
+      "project": "calclab",
+      "commit": "20e5ae9"
+    },
+    {
+      "text": "🤖 Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>",
+      "project": "calclab",
+      "commit": "20e5ae9"
+    },
+    {
+      "text": "하단 시트는 iOS/Android 네이티브 앱의 표준 패턴으로, 콘텐츠와 패널을 동시에 볼 수 있어 모바일 UX 향상",
+      "project": "calclab",
+      "commit": "a8b3737"
+    },
+    {
+      "text": "🤖 Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>",
+      "project": "calclab",
+      "commit": "a8b3737"
+    },
     {
       "text": "프롬프트 분석을 통해 Claude의 해석 과정을 투명화",
       "project": "calclab",
@@ -88,11 +201,11 @@
     }
   ],
   "efficiency": {
-    "avgFilesPerPrompt": 2,
+    "avgFilesPerPrompt": 4.571428571428571,
     "byComplexity": {
       "simple": null,
       "standard": null,
-      "complex": 7.855107855107856
+      "complex": 24.882871097156812
     }
   },
   "project": "calclab"

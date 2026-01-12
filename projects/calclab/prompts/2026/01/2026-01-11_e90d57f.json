@@ -1,0 +1,52 @@
+{
+  "id": "calclab_e90d57f",
+  "project": "calclab",
+  "commit": {
+    "hash": "e90d57fef940af7971e331bf051fb9a3670b61ec",
+    "shortHash": "e90d57f",
+    "author": "HMWKR",
+    "date": "2026-01-12T04:36:28+09:00",
+    "title": "feat(onboarding): 17개 온보딩 컴포넌트 반응형화",
+    "url": "https://github.com/HMWKR/CalcLab/commit/e90d57fef940af7971e331bf051fb9a3670b61ec"
+  },
+  "timestamp": "2026-01-12T02:10:33.336Z",
+  "type": "feat",
+  "complexity": "complex",
+  "original": {
+    "text": "10점 이상을 목표로 모든 작업을 진행을 해줘 모든 과정은 claude.md 지침을 반드시 준수를하며 작업을 진행해주고 ultrathink 모드로 반드시 항상 진행해줘",
+    "wordCount": 20,
+    "lineCount": 1
+  },
+  "analysis": {
+    "interpretation": "P0 심각도로 분류된 Onboarding 컴포넌트 전체 반응형 미적용 이슈 해결",
+    "taskType": "convergent",
+    "constraintLevel": "high",
+    "keywords": [
+      "P0",
+      "신규",
+      "사용자",
+      "온보딩",
+      "불가"
+    ]
+  },
+  "outcome": {
+    "files": [
+      "AchievementBadge - 뱃지 크기/패딩 반응형",
+      "AdaptiveTutorial - 튜토리얼 컨테이너 반응형",
+      "Checklist - 체크리스트 간격/패딩 반응형",
+      "ContextHints (HintInline, HintTooltip) - 힌트 UI 반응형",
+      "FeatureSpotlight - 스포트라이트 오버레이 반응형",
+      "InteractiveTutorial (TutorialOverlay, index) - 대화형 튜토리얼 반응형",
+      "ProgressRing - 진행률 링 크기 반응형",
+      "QuickStartWizard (4개) - 위저드 전체 반응형화"
+    ]
+  },
+  "tags": [
+    "feat",
+    "P0",
+    "신규",
+    "사용자",
+    "온보딩",
+    "불가"
+  ]
+}

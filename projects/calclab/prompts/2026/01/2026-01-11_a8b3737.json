@@ -1,0 +1,60 @@
+{
+  "id": "calclab_a8b3737",
+  "project": "calclab",
+  "commit": {
+    "hash": "a8b3737b38268beab3c376453bf948bac9f50007",
+    "shortHash": "a8b3737",
+    "author": "HMWKR",
+    "date": "2026-01-12T04:33:34+09:00",
+    "title": "feat: 모바일 하단 시트 UI 패턴 구현",
+    "url": "https://github.com/HMWKR/CalcLab/commit/a8b3737b38268beab3c376453bf948bac9f50007"
+  },
+  "timestamp": "2026-01-12T02:10:33.309Z",
+  "type": "feat",
+  "complexity": "complex",
+  "original": {
+    "text": "P0 이슈: AI 패널이 모바일(320-480px)에서 전체 화면을 차지하고 워크스페이스가 숨겨지는 문제. 하단 시트 패턴으로 해결해줘.",
+    "wordCount": 15,
+    "lineCount": 1
+  },
+  "analysis": {
+    "interpretation": "w-80 고정 너비가 모바일에서 전체 화면을 차지하는 P0 이슈 해결",
+    "taskType": "convergent",
+    "constraintLevel": "high",
+    "keywords": [
+      "P0",
+      "하단",
+      "시트",
+      "모바일"
+    ]
+  },
+  "optimized": {
+    "text": "AIPanel과 QuickAccessPanel을 하단 시트 패턴으로 수정해줘:\n- 모바일: fixed bottom-0, h-[70vh], rounded-t-3xl, z-50\n- md 이상: relative, h-full, w-80 (기존 사이드 패널)\n- 모바일 핸들바 추가 (드래그 힌트)\n- ARIA 접근성: role=\"dialog\", aria-modal=\"true\"",
+    "improvements": [
+      "브레이크포인트별 구체적 CSS 명시",
+      "접근성 요구사항 추가"
+    ],
+    "techniques": [
+      "role-prompting"
+    ]
+  },
+  "outcome": {
+    "files": [
+      "AIPanel: 모바일 하단 시트 (h-[70vh]) + md 이상 사이드 패널 전환",
+      "QuickAccessPanel: 모바일 하단 시트 (h-[80vh]) + md 이상 사이드 패널 전환",
+      "모바일 핸들바 (드래그 힌트) 추가",
+      "ARIA 접근성 속성 추가 (role=\"dialog\", aria-modal=\"true\", aria-label)"
+    ]
+  },
+  "insights": [
+    "하단 시트는 iOS/Android 네이티브 앱의 표준 패턴으로, 콘텐츠와 패널을 동시에 볼 수 있어 모바일 UX 향상",
+    "🤖 Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
+  ],
+  "tags": [
+    "feat",
+    "P0",
+    "하단",
+    "시트",
+    "모바일"
+  ]
+}

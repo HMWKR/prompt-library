@@ -1,26 +1,34 @@
 {
-  "generatedAt": "2026-01-12T06:44:25.798Z",
-  "total": 2,
+  "generatedAt": "2026-01-12T12:57:54.282Z",
+  "total": 7,
   "byProject": {
-    "promptproject": 2
+    "promptproject": 7
   },
   "byType": {
     "docs": 1,
-    "chore": 1
+    "chore": 2,
+    "feat": 2,
+    "fix": 2
   },
   "byComplexity": {
-    "standard": 1,
-    "complex": 1
+    "standard": 2,
+    "complex": 5
   },
   "byTaskType": {
-    "convergent": 1,
+    "convergent": 6,
     "mixed": 1
   },
-  "avgPromptWordCount": 23,
-  "avgPromptLineCount": 3,
-  "techniqueUsage": {},
+  "avgPromptWordCount": 19,
+  "avgPromptLineCount": 2,
+  "techniqueUsage": {
+    "self-verification": 1
+  },
   "keywordFrequency": {
-    "ultrathink": 2,
+    "ultrathink": 6,
+    "지침": 3,
+    "claude.md": 2,
+    "개선": 2,
+    "준수": 2,
     "정보": 1,
     "일치": 1,
     "수정": 1,
@@ -28,23 +36,51 @@
     "CLAUDE.md": 1,
     "prompt-library": 1,
     "GitHub": 1,
-    "연동": 1
+    "연동": 1,
+    "기능": 1,
+    "누락": 1,
+    "검토": 1,
+    "남은": 1,
+    "작업": 1,
+    "모드": 1,
+    "A11y": 1,
+    "confirm": 1,
+    "제거": 1,
+    "useCallback": 1,
+    "원본": 1,
+    "복원": 1
   },
   "tagFrequency": {
-    "ultrathink": 2,
+    "ultrathink": 6,
+    "지침": 3,
+    "chore": 2,
+    "feat": 2,
+    "claude.md": 2,
+    "fix": 2,
+    "개선": 2,
+    "준수": 2,
     "docs": 1,
     "정보": 1,
     "일치": 1,
     "수정": 1,
     "분석": 1,
-    "chore": 1,
     "CLAUDE.md": 1,
     "prompt-library": 1,
     "GitHub": 1,
-    "연동": 1
+    "연동": 1,
+    "기능": 1,
+    "누락": 1,
+    "검토": 1,
+    "남은": 1,
+    "작업": 1,
+    "A11y": 1,
+    "confirm": 1,
+    "제거": 1,
+    "useCallback": 1,
+    "원본": 1
   },
   "monthlyTrends": {
-    "2026-01": 2
+    "2026-01": 7
   },
   "topInsights": [
     {
@@ -74,11 +110,11 @@
     }
   ],
   "efficiency": {
-    "avgFilesPerPrompt": 3,
+    "avgFilesPerPrompt": 3.4285714285714284,
     "byComplexity": {
       "simple": null,
       "standard": 11.11111111111111,
-      "complex": 16.666666666666664
+      "complex": 22.341880341880344
     }
   },
   "project": "promptproject"

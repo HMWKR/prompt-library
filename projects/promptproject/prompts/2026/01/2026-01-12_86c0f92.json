@@ -1,0 +1,48 @@
+{
+  "id": "promptproject_86c0f92",
+  "project": "promptproject",
+  "commit": {
+    "hash": "86c0f92ae316613b37203080f34800aedde15487",
+    "shortHash": "86c0f92",
+    "author": "HMWKR",
+    "date": "2026-01-12T18:57:30+09:00",
+    "title": "feat: browse/page.tsx 정렬 순서 토글 UI 추가 및 함수 선언 순서 오류 수정",
+    "url": "https://github.com/HMWKR/promptProject/commit/86c0f92ae316613b37203080f34800aedde15487"
+  },
+  "timestamp": "2026-01-12T12:57:54.220Z",
+  "type": "feat",
+  "complexity": "complex",
+  "original": {
+    "text": "기능 구현이 누락된것 같은 부분만 다시한번 검토를 한다음 구현을 이어서 하자\n이때 모든 사고와 모든 과정은 ultrathink 모드로 진행을 하며\ncladue.md 지침을 반드시 준수를하며 작업을 해",
+    "wordCount": 26,
+    "lineCount": 3
+  },
+  "analysis": {
+    "interpretation": "선언된 상태가 UI에서 사용되지 않는 누락 기능 찾아 구현",
+    "taskType": "convergent",
+    "constraintLevel": "medium",
+    "keywords": [
+      "기능",
+      "누락",
+      "검토",
+      "ultrathink",
+      "claude.md"
+    ]
+  },
+  "outcome": {
+    "files": [
+      "browse/page.tsx: 정렬 순서(오름차순/내림차순) 토글 버튼 UI 추가",
+      "browse/page.tsx: loadPrompts 함수 선언 순서 오류 수정 (refreshKey 패턴 적용)",
+      "folders/page.tsx: loadFolders 함수 선언 순서 오류 수정 (refreshKey 패턴 적용)",
+      "미사용 import 제거 (CardDescription, FileText)"
+    ]
+  },
+  "tags": [
+    "feat",
+    "기능",
+    "누락",
+    "검토",
+    "ultrathink",
+    "claude.md"
+  ]
+}

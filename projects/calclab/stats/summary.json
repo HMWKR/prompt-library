@@ -1,29 +1,30 @@
 {
-  "generatedAt": "2026-01-12T06:44:25.798Z",
-  "total": 14,
+  "generatedAt": "2026-01-12T12:57:54.281Z",
+  "total": 15,
   "byProject": {
-    "calclab": 14
+    "calclab": 15
   },
   "byType": {
     "feat": 10,
     "build": 1,
-    "docs": 3
+    "docs": 4
   },
   "byComplexity": {
-    "complex": 14
+    "complex": 15
   },
   "byTaskType": {
-    "convergent": 11,
+    "convergent": 12,
     "mixed": 2,
     "divergent": 1
   },
-  "avgPromptWordCount": 21,
-  "avgPromptLineCount": 1,
+  "avgPromptWordCount": 22,
+  "avgPromptLineCount": 2,
   "techniqueUsage": {
     "role-prompting": 1,
     "chain-of-thought": 1
   },
   "keywordFrequency": {
+    "ultrathink": 3,
     "모달": 2,
     "모바일": 2,
     "P0": 2,
@@ -32,7 +33,6 @@
     "타겟": 2,
     "44px": 2,
     "프롬프트": 2,
-    "ultrathink": 2,
     "10점": 2,
     "이상": 2,
     "claude.md": 2,
@@ -84,17 +84,23 @@
     "단계": 1,
     "매직": 1,
     "넘버": 1,
-    "상수화": 1
+    "상수화": 1,
+    "5계층": 1,
+    "48점": 1,
+    "게이트키퍼": 1,
+    "객관적": 1,
+    "기준": 1
   },
   "tagFrequency": {
     "feat": 10,
-    "docs": 3,
+    "docs": 4,
     "모달": 2,
     "모바일": 2,
     "P0": 2,
     "P1": 2,
     "터치": 2,
     "타겟": 2,
+    "ultrathink": 2,
     "10점": 2,
     "이상": 2,
     "claude.md": 2,
@@ -122,7 +128,6 @@
     "자세하게": 1,
     "최적의": 1,
     "프롬프트": 1,
-    "ultrathink": 1,
     "44px": 1,
     "접근성": 1,
     "준수": 1,
@@ -143,10 +148,14 @@
     "Template": 1,
     "매직": 1,
     "넘버": 1,
-    "상수화": 1
+    "상수화": 1,
+    "5계층": 1,
+    "48점": 1,
+    "게이트키퍼": 1,
+    "객관적": 1
   },
   "monthlyTrends": {
-    "2026-01": 14
+    "2026-01": 15
   },
   "topInsights": [
     {
@@ -201,11 +210,11 @@
     }
   ],
   "efficiency": {
-    "avgFilesPerPrompt": 4.571428571428571,
+    "avgFilesPerPrompt": 4.466666666666667,
     "byComplexity": {
       "simple": null,
       "standard": null,
-      "complex": 24.882871097156812
+      "complex": 23.67855847855848
     }
   },
   "project": "calclab"

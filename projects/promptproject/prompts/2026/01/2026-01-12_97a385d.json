@@ -1,0 +1,49 @@
+{
+  "id": "promptproject_97a385d",
+  "project": "promptproject",
+  "commit": {
+    "hash": "97a385df0bf0babe68ef9da9ba18cbe2e19d9bfb",
+    "shortHash": "97a385d",
+    "author": "HMWKR",
+    "date": "2026-01-12T19:02:32+09:00",
+    "title": "fix: ESLint 오류 및 Next.js Link 컴포넌트 적용",
+    "url": "https://github.com/HMWKR/promptProject/commit/97a385df0bf0babe68ef9da9ba18cbe2e19d9bfb"
+  },
+  "timestamp": "2026-01-12T12:57:54.227Z",
+  "type": "fix",
+  "complexity": "complex",
+  "original": {
+    "text": "남은 작업들도 진행을 해주며 반드시 claude.md 지침을 준수를하며\nultrathink 모드의 사고로 진행을 해줘",
+    "wordCount": 13,
+    "lineCount": 2
+  },
+  "analysis": {
+    "interpretation": "이전에 보류했던 ESLint 오류들을 수정하고 커밋",
+    "taskType": "convergent",
+    "constraintLevel": "high",
+    "keywords": [
+      "남은",
+      "작업",
+      "claude.md",
+      "지침",
+      "ultrathink",
+      "모드"
+    ]
+  },
+  "outcome": {
+    "files": [
+      "builder/page.tsx: <a> 태그 5개를 <Link> 컴포넌트로 변경",
+      "library/[id]/page.tsx: useEffect 의존성 경고에 eslint-disable 주석 추가",
+      "add/page.tsx: 미사용 CheckCircle2 import 제거",
+      "template-converter.tsx: any 타입을 TemplateVariable[keyof TemplateVariable]로 변경, 미사용 Badge import 제거"
+    ]
+  },
+  "tags": [
+    "fix",
+    "남은",
+    "작업",
+    "claude.md",
+    "지침",
+    "ultrathink"
+  ]
+}

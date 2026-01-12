@@ -1,5 +1,99 @@
 [
   {
+    "id": "promptproject_e60d770",
+    "project": "promptproject",
+    "date": "2026-01-12T19:15:55+09:00",
+    "title": "fix: Phase 3 UI/UX 검수 - P1/P2 이슈 수정",
+    "type": "fix",
+    "complexity": "complex",
+    "tags": [
+      "fix",
+      "A11y",
+      "confirm",
+      "제거",
+      "useCallback",
+      "원본"
+    ]
+  },
+  {
+    "id": "promptproject_97a385d",
+    "project": "promptproject",
+    "date": "2026-01-12T19:02:32+09:00",
+    "title": "fix: ESLint 오류 및 Next.js Link 컴포넌트 적용",
+    "type": "fix",
+    "complexity": "complex",
+    "tags": [
+      "fix",
+      "남은",
+      "작업",
+      "claude.md",
+      "지침",
+      "ultrathink"
+    ]
+  },
+  {
+    "id": "promptproject_86c0f92",
+    "project": "promptproject",
+    "date": "2026-01-12T18:57:30+09:00",
+    "title": "feat: browse/page.tsx 정렬 순서 토글 UI 추가 및 함수 선언 순서 오류 수정",
+    "type": "feat",
+    "complexity": "complex",
+    "tags": [
+      "feat",
+      "기능",
+      "누락",
+      "검토",
+      "ultrathink",
+      "claude.md"
+    ]
+  },
+  {
+    "id": "promptproject_c235324",
+    "project": "promptproject",
+    "date": "2026-01-12T18:27:18+09:00",
+    "title": "feat: BRIXO Prompt Refinery Platform + Phase 3 Prompt Library 시스템 구현",
+    "type": "feat",
+    "complexity": "complex",
+    "tags": [
+      "feat",
+      "개선",
+      "ultrathink",
+      "지침",
+      "준수"
+    ]
+  },
+  {
+    "id": "promptproject_c783b12",
+    "project": "promptproject",
+    "date": "2026-01-12T18:25:04+09:00",
+    "title": "chore: .gitignore 업데이트 및 CLAUDE.md 지침 강화",
+    "type": "chore",
+    "complexity": "standard",
+    "tags": [
+      "chore",
+      "개선",
+      "ultrathink",
+      "지침",
+      "준수"
+    ]
+  },
+  {
+    "id": "calclab_f4e1662",
+    "project": "calclab",
+    "date": "2026-01-12T16:53:57+09:00",
+    "title": "docs: 5계층 프롬프트 품질 검수 시스템 구축 (15개 → 16개 필수 섹션)",
+    "type": "docs",
+    "complexity": "complex",
+    "tags": [
+      "docs",
+      "5계층",
+      "48점",
+      "게이트키퍼",
+      "ultrathink",
+      "객관적"
+    ]
+  },
+  {
     "id": "calclab_c32da8b",
     "project": "calclab",
     "date": "2026-01-12T04:56:56+09:00",

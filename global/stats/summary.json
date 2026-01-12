@@ -1,22 +1,23 @@
 {
-  "generatedAt": "2026-01-12T06:44:25.796Z",
-  "total": 16,
+  "generatedAt": "2026-01-12T12:57:54.279Z",
+  "total": 22,
   "byProject": {
-    "calclab": 14,
-    "promptproject": 2
+    "calclab": 15,
+    "promptproject": 7
   },
   "byType": {
-    "feat": 10,
+    "feat": 12,
     "build": 1,
-    "docs": 4,
-    "chore": 1
+    "docs": 5,
+    "chore": 2,
+    "fix": 2
   },
   "byComplexity": {
-    "complex": 15,
-    "standard": 1
+    "complex": 20,
+    "standard": 2
   },
   "byTaskType": {
-    "convergent": 12,
+    "convergent": 18,
     "mixed": 3,
     "divergent": 1
   },
@@ -24,10 +25,14 @@
   "avgPromptLineCount": 2,
   "techniqueUsage": {
     "role-prompting": 1,
-    "chain-of-thought": 1
+    "chain-of-thought": 1,
+    "self-verification": 1
   },
   "keywordFrequency": {
-    "ultrathink": 4,
+    "ultrathink": 9,
+    "지침": 5,
+    "claude.md": 4,
+    "준수": 3,
     "모달": 2,
     "모바일": 2,
     "P0": 2,
@@ -38,8 +43,8 @@
     "프롬프트": 2,
     "10점": 2,
     "이상": 2,
-    "claude.md": 2,
-    "지침": 2,
+    "모드": 2,
+    "개선": 2,
     "오버레이": 1,
     "UX": 1,
     "로컬": 1,
@@ -64,8 +69,6 @@
     "자세하게": 1,
     "최적의": 1,
     "접근성": 1,
-    "준수": 1,
-    "모드": 1,
     "전문적": 1,
     "용어": 1,
     "구체화": 1,
@@ -88,6 +91,11 @@
     "매직": 1,
     "넘버": 1,
     "상수화": 1,
+    "5계층": 1,
+    "48점": 1,
+    "게이트키퍼": 1,
+    "객관적": 1,
+    "기준": 1,
     "정보": 1,
     "일치": 1,
     "수정": 1,
@@ -95,12 +103,26 @@
     "CLAUDE.md": 1,
     "prompt-library": 1,
     "GitHub": 1,
-    "연동": 1
+    "연동": 1,
+    "기능": 1,
+    "누락": 1,
+    "검토": 1,
+    "남은": 1,
+    "작업": 1,
+    "A11y": 1,
+    "confirm": 1,
+    "제거": 1,
+    "useCallback": 1,
+    "원본": 1,
+    "복원": 1
   },
   "tagFrequency": {
-    "feat": 10,
-    "docs": 4,
-    "ultrathink": 3,
+    "feat": 12,
+    "ultrathink": 8,
+    "docs": 5,
+    "지침": 5,
+    "claude.md": 4,
+    "준수": 3,
     "모달": 2,
     "모바일": 2,
     "P0": 2,
@@ -109,8 +131,9 @@
     "타겟": 2,
     "10점": 2,
     "이상": 2,
-    "claude.md": 2,
-    "지침": 2,
+    "chore": 2,
+    "fix": 2,
+    "개선": 2,
     "오버레이": 1,
     "UX": 1,
     "build": 1,
@@ -136,7 +159,6 @@
     "프롬프트": 1,
     "44px": 1,
     "접근성": 1,
-    "준수": 1,
     "전문적": 1,
     "용어": 1,
     "구체화": 1,
@@ -155,18 +177,31 @@
     "매직": 1,
     "넘버": 1,
     "상수화": 1,
+    "5계층": 1,
+    "48점": 1,
+    "게이트키퍼": 1,
+    "객관적": 1,
     "정보": 1,
     "일치": 1,
     "수정": 1,
     "분석": 1,
-    "chore": 1,
     "CLAUDE.md": 1,
     "prompt-library": 1,
     "GitHub": 1,
-    "연동": 1
+    "연동": 1,
+    "기능": 1,
+    "누락": 1,
+    "검토": 1,
+    "남은": 1,
+    "작업": 1,
+    "A11y": 1,
+    "confirm": 1,
+    "제거": 1,
+    "useCallback": 1,
+    "원본": 1
   },
   "monthlyTrends": {
-    "2026-01": 16
+    "2026-01": 22
   },
   "topInsights": [
     {
@@ -246,11 +281,11 @@
     }
   ],
   "efficiency": {
-    "avgFilesPerPrompt": 4.375,
+    "avgFilesPerPrompt": 4.136363636363637,
     "byComplexity": {
       "simple": null,
       "standard": 11.11111111111111,
-      "complex": 24.335124135124136
+      "complex": 23.344388944388946
     }
   }
 }

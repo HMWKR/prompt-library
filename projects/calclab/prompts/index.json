@@ -110,5 +110,13 @@
     "type": "feat",
     "complexity": "complex",
     "path": "2026/01/2026-01-11_c32da8b.json"
+  },
+  {
+    "id": "calclab_f4e1662",
+    "date": "2026-01-12T16:53:57+09:00",
+    "title": "docs: 5계층 프롬프트 품질 검수 시스템 구축 (15개 → 16개 필수 섹션)",
+    "type": "docs",
+    "complexity": "complex",
+    "path": "2026/01/2026-01-12_f4e1662.json"
   }
 ]

@@ -11,6 +11,10 @@
     {
       "name": "promptProject",
       "repo": "HMWKR/promptProject"
+    },
+    {
+      "name": "prompt-dashboard",
+      "repo": "HMWKR/prompt-dashboard"
     }
   ]
 }

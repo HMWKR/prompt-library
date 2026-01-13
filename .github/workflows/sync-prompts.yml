@@ -55,7 +55,7 @@ jobs:
 
             # 소스 저장소 체크아웃
             if gh api "repos/$repo" &>/dev/null; then
-              git clone --depth 0 "https://x-access-token:${GH_TOKEN}@github.com/$repo.git" "source-$name_lower" 2>/dev/null || {
+              git clone --depth 1 "https://x-access-token:${GH_TOKEN}@github.com/$repo.git" "source-$name_lower" || {
                 echo "Failed to clone $repo, skipping..."
                 continue
               }

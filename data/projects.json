@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "name": "CLAUDE-TEMPLATES",
+      "repo": "HMWKR/CLAUDE-TEMPLATES"
+    },
+    {
+      "name": "CalcLab",
+      "repo": "HMWKR/CalcLab"
+    },
+    {
+      "name": "promptProject",
+      "repo": "HMWKR/promptProject"
+    }
+  ]
+}

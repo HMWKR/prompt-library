@@ -1,0 +1,74 @@
+name: Auto Register Projects
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 매일 자정 (UTC)
+  workflow_dispatch:      # 수동 실행 가능
+
+permissions:
+  contents: write
+
+jobs:
+  scan-and-register:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout prompt-library
+        uses: actions/checkout@v4
+
+      - name: Scan HMWKR repositories for CLAUDE.md
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Scanning HMWKR repositories..."
+
+          # 기존 등록된 프로젝트 로드
+          if [ -f "data/projects.json" ]; then
+            existing=$(cat data/projects.json)
+          else
+            existing='{"projects":[]}'
+          fi
+
+          # HMWKR 사용자의 모든 저장소 조회 (조직이 아닌 개인 계정)
+          repos=$(gh api users/HMWKR/repos --jq '.[].name' 2>/dev/null || echo "")
+
+          if [ -z "$repos" ]; then
+            echo "No repositories found or API error"
+            exit 0
+          fi
+
+          new_count=0
+
+          for repo in $repos; do
+            # CLAUDE.md 존재 여부 확인
+            if gh api "repos/HMWKR/$repo/contents/CLAUDE.md" &>/dev/null; then
+              # projects.json에 없으면 추가
+              if ! echo "$existing" | jq -e ".projects[] | select(.name == \"$repo\")" &>/dev/null; then
+                echo "New project detected: $repo"
+                existing=$(echo "$existing" | jq ".projects += [{\"name\": \"$repo\", \"repo\": \"HMWKR/$repo\"}]")
+                new_count=$((new_count + 1))
+              fi
+            fi
+          done
+
+          echo "Found $new_count new projects"
+
+          # 업데이트된 목록 저장
+          mkdir -p data
+          echo "$existing" | jq '.' > data/projects.json
+
+          echo "Projects registered:"
+          cat data/projects.json
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add data/projects.json
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: auto-register new Claude projects"
+            git push
+          fi

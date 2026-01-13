@@ -1,12 +1,23 @@
-name: Sync Prompts
+name: Sync Prompts (Backup)
+
+# ============================================================
+# 이 워크플로우는 백업/폴백용입니다.
+#
+# 새 아키텍처 (v2.0 - 분산 Push):
+#   각 프로젝트가 자체 gh-pages에 prompts.json을 배포하고
+#   prompt-dashboard에서 직접 fetch하여 집계합니다.
+#
+# 이 워크플로우는 긴급 상황이나 수동 동기화가 필요할 때만 사용하세요.
+# ============================================================
 
 on:
-  schedule:
-    - cron: '0 */6 * * *'  # 6시간마다
+  # 스케줄 비활성화 - 분산 방식으로 전환
+  # schedule:
+  #   - cron: '0 */6 * * *'  # 6시간마다
   workflow_dispatch:
     inputs:
       project:
-        description: 'Sync specific project (or "all")'
+        description: 'Sync specific project (or "all") - 백업용 수동 동기화'
         required: false
         default: 'all'
 

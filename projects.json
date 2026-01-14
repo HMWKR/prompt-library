@@ -1,0 +1,32 @@
+{
+  "version": "2.0",
+  "architecture": "distributed-push",
+  "lastUpdated": "2026-01-14",
+  "description": "각 프로젝트가 자체 gh-pages에 prompts.json을 배포하고, dashboard에서 집계",
+  "projects": [
+    {
+      "name": "CLAUDE-TEMPLATES",
+      "repo": "HMWKR/CLAUDE-TEMPLATES",
+      "owner": "HMWKR",
+      "promptsUrl": "https://hmwkr.github.io/CLAUDE-TEMPLATES/prompts.json"
+    },
+    {
+      "name": "CalcLab",
+      "repo": "HMWKR/CalcLab",
+      "owner": "HMWKR",
+      "promptsUrl": "https://hmwkr.github.io/CalcLab/prompts.json"
+    },
+    {
+      "name": "promptProject",
+      "repo": "HMWKR/promptProject",
+      "owner": "HMWKR",
+      "promptsUrl": "https://hmwkr.github.io/promptProject/prompts.json"
+    },
+    {
+      "name": "prompt-dashboard",
+      "repo": "HMWKR/prompt-dashboard",
+      "owner": "HMWKR",
+      "promptsUrl": "https://hmwkr.github.io/prompt-dashboard/prompts.json"
+    }
+  ]
+}

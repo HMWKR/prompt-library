@@ -1,6 +1,7 @@
 {
   "version": "2.0",
   "architecture": "distributed-push",
+  "lastUpdated": "2026-01-14",
   "description": "각 프로젝트가 자체 gh-pages에 prompts.json을 배포하고, dashboard에서 집계",
   "projects": [
     {

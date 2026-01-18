@@ -1,32 +1,73 @@
 {
-  "version": "2.0",
+  "version": "3.0",
   "architecture": "distributed-push",
-  "lastUpdated": "2026-01-14",
-  "description": "각 프로젝트가 자체 gh-pages에 prompts.json을 배포하고, dashboard에서 집계",
+  "lastUpdated": "2026-01-15",
+  "description": "프로젝트 레지스트리 - dashboard가 이 목록을 기반으로 각 프로젝트의 prompts.json을 집계",
   "projects": [
     {
       "name": "CLAUDE-TEMPLATES",
       "repo": "HMWKR/CLAUDE-TEMPLATES",
       "owner": "HMWKR",
-      "promptsUrl": "https://hmwkr.github.io/CLAUDE-TEMPLATES/prompts.json"
+      "promptsUrl": "https://hmwkr.github.io/CLAUDE-TEMPLATES/prompts.json",
+      "metadata": {
+        "category": "template",
+        "status": "active",
+        "description": "Claude 협업 템플릿 저장소"
+      },
+      "cache": {
+        "promptCount": null,
+        "lastFetched": null
+      }
     },
     {
       "name": "CalcLab",
       "repo": "HMWKR/CalcLab",
       "owner": "HMWKR",
-      "promptsUrl": "https://hmwkr.github.io/CalcLab/prompts.json"
+      "promptsUrl": "https://hmwkr.github.io/CalcLab/prompts.json",
+      "metadata": {
+        "category": "application",
+        "status": "active",
+        "description": "SI 차원 분석 기반 공학 계산기"
+      },
+      "cache": {
+        "promptCount": null,
+        "lastFetched": null
+      }
     },
     {
       "name": "promptProject",
       "repo": "HMWKR/promptProject",
       "owner": "HMWKR",
-      "promptsUrl": "https://hmwkr.github.io/promptProject/prompts.json"
+      "promptsUrl": "https://hmwkr.github.io/promptProject/prompts.json",
+      "metadata": {
+        "category": "guide",
+        "status": "active",
+        "description": "프롬프트 설정 가이드"
+      },
+      "cache": {
+        "promptCount": null,
+        "lastFetched": null
+      }
     },
     {
       "name": "prompt-dashboard",
       "repo": "HMWKR/prompt-dashboard",
       "owner": "HMWKR",
-      "promptsUrl": "https://hmwkr.github.io/prompt-dashboard/prompts.json"
+      "promptsUrl": "https://hmwkr.github.io/prompt-dashboard/prompts.json",
+      "metadata": {
+        "category": "dashboard",
+        "status": "active",
+        "description": "프롬프트 시각화 대시보드"
+      },
+      "cache": {
+        "promptCount": null,
+        "lastFetched": null
+      }
     }
-  ]
+  ],
+  "summary": {
+    "totalProjects": 4,
+    "totalPromptsCached": null,
+    "lastAggregated": null
+  }
 }

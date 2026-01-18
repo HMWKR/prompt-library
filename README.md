@@ -1,141 +1,180 @@
-# Prompt Library
+# Prompt Registry
 
-AI 협업 프롬프트 라이브러리 - 프롬프트 통계 분석 및 학습 자료
+프롬프트 에코시스템의 **프로젝트 레지스트리**입니다.
 
-## 개요
+---
 
-이 저장소는 여러 프로젝트의 커밋 메시지에서 **3단계 프롬프트 기록**을 수집하고 분석합니다:
-
-1. **원본 프롬프트**: 사용자가 실제로 입력한 내용
-2. **프롬프트 분석**: Claude의 해석 (작업 유형, 제약 수준, 핵심 키워드)
-3. **최적화된 프롬프트**: 더 나은 결과를 위한 개선 버전
-
-## 대시보드
-
-**Live Dashboard**: [https://hmwkr.github.io/prompt-dashboard/](https://hmwkr.github.io/prompt-dashboard/)
-
-대시보드는 별도 저장소로 분리되었습니다: [prompt-dashboard](https://github.com/HMWKR/prompt-dashboard)
-
-## 프로젝트 구조
+## 역할
 
 ```
-prompt-library/
-├── projects/           # 프로젝트별 프롬프트
-│   └── calclab/
-│       ├── config.json
-│       ├── prompts/
-│       └── stats/
-├── global/             # 전체 통합 데이터 (대시보드 데이터 소스)
-│   ├── index.json
-│   └── stats/
-├── docs/templates/     # 재사용 가능한 프롬프트 템플릿
-└── scripts/            # 추출/분석 스크립트
+┌─────────────────────────────────────────────────────────────────┐
+│                    Distributed Push Architecture                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  각 프로젝트 (CalcLab, claude-templates, ...)                  │
+│       │                                                         │
+│       │ prompts.json 자체 배포 (gh-pages)                      │
+│       ▼                                                         │
+│  ┌─────────────────────────────────────────────────────────┐   │
+│  │                 prompt-registry                          │   │
+│  │                 (이 저장소)                              │   │
+│  │                                                          │   │
+│  │  역할: 프로젝트 목록 관리                                │   │
+│  │  파일: data/projects.json                                │   │
+│  │                                                          │   │
+│  └─────────────────────────────────────────────────────────┘   │
+│       │                                                         │
+│       │ 프로젝트 목록 제공                                     │
+│       ▼                                                         │
+│  ┌─────────────────────────────────────────────────────────┐   │
+│  │                 prompt-dashboard                         │   │
+│  │                                                          │   │
+│  │  1. projects.json fetch (이 저장소에서)                  │   │
+│  │  2. 각 프로젝트 prompts.json fetch                       │   │
+│  │  3. 브라우저에서 데이터 집계 및 시각화                   │   │
+│  │                                                          │   │
+│  └─────────────────────────────────────────────────────────┘   │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
-## 통계 현황
+**핵심 원칙**: 이 저장소는 **프로젝트 목록만** 관리합니다.
+- 프롬프트 데이터는 각 프로젝트가 자체 gh-pages에 배포
+- 데이터 집계는 prompt-dashboard가 브라우저에서 수행
+- 중앙 서버 없는 완전 분산 아키텍처
 
-<!-- STATS_START -->
-*통계가 아직 생성되지 않았습니다.*
-<!-- STATS_END -->
+---
 
-## 프롬프트 기록 형식
+## 폴더 구조
 
-커밋 메시지에서 다음 형식의 프롬프트를 추출합니다:
-
-```markdown
-## 프롬프트 기록
-
-### 원본 프롬프트
 ```
-사용자 입력 내용
-```
-
-### 프롬프트 분석
-> **해석**: Claude가 이해한 내용
-> **작업 유형**: 수렴적/발산적/혼합형
-> **제약 수준**: 높음/중간/낮음
-> **핵심 키워드**: keyword1, keyword2
-
-### 최적화된 프롬프트
-```
-개선된 프롬프트 버전
+prompt-registry/
+├── data/
+│   └── projects.json      # 프로젝트 레지스트리 (v3.0)
+├── docs/                  # 가이드 문서
+├── schema/                # JSON 스키마 정의
+├── archive/               # 레거시 폴더 (참조용)
+│   ├── projects/          # (구) 프로젝트별 데이터
+│   ├── global/            # (구) 중앙 집계 데이터
+│   └── scripts/           # (구) 추출 스크립트
+├── CLAUDE.md              # Claude 협업 지침
+└── README.md              # 이 문서
 ```
 
-**개선 포인트**:
-- 개선 사항 1
-- 개선 사항 2
-```
+---
 
-## 통합 프로젝트
+## 등록된 프로젝트
 
-| 프로젝트 | 설명 | 상태 |
-|----------|------|------|
-| [CalcLab](https://github.com/HMWKR/CalcLab) | SI 차원 분석 기반 공학 계산기 | ✅ 활성 |
+| 프로젝트 | 설명 | 카테고리 | 상태 |
+|----------|------|:--------:|:----:|
+| [CLAUDE-TEMPLATES](https://github.com/HMWKR/CLAUDE-TEMPLATES) | Claude 협업 템플릿 | template | ✅ |
+| [CalcLab](https://github.com/HMWKR/CalcLab) | SI 차원 분석 계산기 | application | ✅ |
+| [promptProject](https://github.com/HMWKR/promptProject) | 프롬프트 설정 가이드 | guide | ✅ |
+| [prompt-dashboard](https://github.com/HMWKR/prompt-dashboard) | 시각화 대시보드 | dashboard | ✅ |
 
-## 새 프로젝트 추가
+---
 
-> **상세 가이드**: 비전공자도 따라할 수 있는 자세한 설명은 [NEW-PROJECT-SETUP-GUIDE.md](docs/NEW-PROJECT-SETUP-GUIDE.md)를 참고하세요.
->
-> **Claude 프롬프트 템플릿**: 새 프로젝트 시작 시 Claude에게 전달할 프롬프트는 [NEW-PROJECT-INIT-PROMPT.md](docs/NEW-PROJECT-INIT-PROMPT.md)를 복사해서 사용하세요.
-
-### 빠른 설정 (권장)
-
-```bash
-cd prompt-library
-./scripts/setup-project.sh <project-name> [github-username] [--with-claude-md <path>]
-```
-
-**예시:**
-
-```bash
-# 기본 사용법
-./scripts/setup-project.sh my-new-app
-
-# GitHub 사용자명 지정
-./scripts/setup-project.sh my-new-app HMWKR
-
-# CLAUDE.md 템플릿도 함께 복사
-./scripts/setup-project.sh my-new-app HMWKR --with-claude-md /path/to/new-project
-```
-
-**스크립트가 자동으로 수행하는 작업:**
-
-1. `projects/<name>/prompts/` 폴더 생성
-2. `projects/<name>/config.json` 생성
-3. `sync-prompts.yml` 업데이트 안내
-4. (선택) 새 프로젝트에 CLAUDE.md 템플릿 복사
-
-### 수동 설정
-
-1. `projects/<project-name>/config.json` 생성:
+## projects.json 스키마 (v3.0)
 
 ```json
 {
-  "name": "project-name",
-  "repository": "owner/repo",
-  "syncEnabled": true
+  "version": "3.0",
+  "architecture": "distributed-push",
+  "projects": [
+    {
+      "name": "프로젝트명",
+      "repo": "owner/repo",
+      "owner": "owner",
+      "promptsUrl": "https://owner.github.io/repo/prompts.json",
+      "metadata": {
+        "category": "template|application|guide|dashboard",
+        "status": "active|inactive|archived",
+        "description": "프로젝트 설명"
+      },
+      "cache": {
+        "promptCount": null,
+        "lastFetched": null
+      }
+    }
+  ],
+  "summary": {
+    "totalProjects": 4,
+    "totalPromptsCached": null,
+    "lastAggregated": null
+  }
 }
 ```
 
-2. `.github/workflows/sync-prompts.yml`의 matrix에 프로젝트 추가
+### 필드 설명
 
-3. GitHub Actions가 자동으로 프롬프트를 수집합니다.
+| 필드 | 용도 |
+|------|------|
+| `promptsUrl` | 각 프로젝트의 prompts.json URL (dashboard가 fetch) |
+| `metadata` | 프로젝트 분류 및 상태 정보 |
+| `cache` | 대시보드가 캐시한 통계 (선택) |
+| `summary` | 전체 요약 통계 |
 
-## 분석 도구
+---
 
-### 프롬프트 추출
+## 새 프로젝트 등록
+
+### 1. 프로젝트에 시스템 설치
 
 ```bash
-cd <source-project>
-node ../prompt-library/scripts/extract-prompts.js <project-name>
+# claude-templates의 init-project.sh 실행
+curl -sL https://raw.githubusercontent.com/HMWKR/CLAUDE-TEMPLATES/main/init-project.sh | bash
 ```
 
-### 통계 생성
+### 2. 이 저장소에 등록
+
+`data/projects.json`에 프로젝트 추가:
+
+```json
+{
+  "name": "new-project",
+  "repo": "owner/new-project",
+  "owner": "owner",
+  "promptsUrl": "https://owner.github.io/new-project/prompts.json",
+  "metadata": {
+    "category": "application",
+    "status": "active",
+    "description": "프로젝트 설명"
+  },
+  "cache": {
+    "promptCount": null,
+    "lastFetched": null
+  }
+}
+```
+
+### 3. PR 생성
 
 ```bash
-node scripts/generate-stats.js
+git checkout -b add-new-project
+git add data/projects.json
+git commit -m "chore: add new-project to registry"
+git push origin add-new-project
+# → PR 생성
 ```
+
+---
+
+## 관련 저장소
+
+| 저장소 | 역할 | URL |
+|--------|------|-----|
+| **prompt-ecosystem** | 문서 허브 | (로컬) |
+| **prompt-dashboard** | 시각화 | https://github.com/HMWKR/prompt-dashboard |
+| **claude-templates** | 템플릿 소스 | https://github.com/HMWKR/CLAUDE-TEMPLATES |
+
+---
 
 ## 라이선스
 
-MIT License
+MIT
+
+---
+
+*최종 업데이트: 2026-01-15*
+*버전: v3.0 (프로젝트 레지스트리)*
+*Claude Opus 4.5 + User 협업*

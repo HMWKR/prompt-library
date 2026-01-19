@@ -170,9 +170,70 @@ prompt-library/
 
 ---
 
+## 9-2. 깊은 사고 기법 (Deep Reasoning Techniques)
+
+> **2026-01-16 변경**: Thinking budget이 기본 최대(31,999 토큰)로 설정됨.
+> `ultrathink`, `think hard` 등 키워드는 더 이상 작동하지 않음.
+
+### 효과적인 사고 유도 방법
+
+| 방법 | 프롬프트 예시 | 효과 |
+|------|--------------|------|
+| **High-level Instruction** | "깊이 분석해줘" | Anthropic 공식 권장 |
+| **Step-by-step** | "단계별로 분석해줘" | Chain of Thought |
+| **Structured Output** | "`<thinking>`과 `<answer>` 태그로 구분해줘" | 사고/결론 분리 |
+| **Problem Decomposition** | "하위 문제로 분해해서 해결해줘" | 복잡한 문제 분해 |
+| **Self-Verification** | "결론 전에 스스로 검증해줘" | 정확도 향상 |
+
+### 핵심 원칙
+
+> **"Claude often performs better with high-level instructions to just think deeply about a task rather than step-by-step prescriptive guidance."**
+> — [Claude Docs](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/extended-thinking-tips)
+
+**즉, "단계별로 해라"보다 "깊이 분석해라"가 더 효과적.**
+
+### 5단계 고차원 사고 유도 프롬프트
+
+> **핵심 원칙**: 모든 작업에서 **5단계 메타인지 프롬프트를 기본**으로 적용
+
+| 레벨 | 효과 | 설명 |
+|:----:|:----:|------|
+| 1단계 | 낮음 | 기본 ("단계별로 생각해줘") |
+| 2단계 | 중간 | 구조화된 사고 유도 |
+| 3단계 | 높음 | 계층적 분해 (Hierarchical Decomposition) |
+| 4단계 | 매우 높음 | XML 태그 구조화 |
+| **5단계** | **최고** | **메타인지 프롬프트 ⭐ 기본 권장** |
+
+#### 5단계: 메타인지 프롬프트 (최고 수준) ⭐ 기본 권장
+
+> **모든 작업에서 이 방식을 기본으로 사용**
+
+```
+이 문제를 해결하기 전에:
+
+1. **가정 검토**: 내가 당연하게 여기는 전제는 무엇인가?
+2. **반대 관점**: 이 결론에 반대하는 가장 강력한 논거는?
+3. **실패 모드**: 이 해결책이 실패할 수 있는 시나리오는?
+4. **숨겨진 변수**: 내가 놓치고 있을 수 있는 요소는?
+5. **확신도**: 내 결론에 대해 얼마나 확신하는가? (1-10)
+
+각 단계를 명시적으로 거친 후 최종 답변을 제시해줘.
+```
+
+> ✅ **Claude는 모든 작업에서 위 5가지 자가 검증을 내부적으로 수행해야 함**
+
+### Thinking Mode 분기 가이드
+
+| Thinking Mode | 권장 프롬프트 스타일 |
+|:-------------:|---------------------|
+| **ON** | 5단계 메타인지 + 고수준 지시 ("깊이 생각해") |
+| **OFF** | 5단계 메타인지 + 구조화된 지시 (XML 태그, 단계별 프레임워크) |
+
+---
+
 ## 10. 문제 해결 프로토콜
 
-> **모든 작업은 ultrathink 모드로 진행한다.**
+> **2026-01-16 변경**: `ultrathink` 키워드는 더 이상 작동하지 않음. 대신 5단계 메타인지 사고 적용.
 
 ### 레지스트리 작업 워크플로우
 
@@ -296,7 +357,7 @@ Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>
 - 불확실한 정보는 [추정] 표시
 
 [필수 준수]
-1) ultrathink 모드
+1) 5단계 메타인지 사고 적용 (모든 작업)
 2) JSON 형식 유지
 3) 필수 필드 누락 금지
 4) cache 필드 수동 수정 금지

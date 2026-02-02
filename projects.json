@@ -1,7 +1,7 @@
 {
   "version": "3.0",
   "architecture": "distributed-push",
-  "lastUpdated": "2026-01-15",
+  "lastUpdated": "2026-02-02",
   "description": "프로젝트 레지스트리 - dashboard가 이 목록을 기반으로 각 프로젝트의 prompts.json을 집계",
   "projects": [
     {
@@ -63,10 +63,25 @@
         "promptCount": null,
         "lastFetched": null
       }
+    },
+    {
+      "name": "yt-longform-ai",
+      "repo": "HMWKR/yt-longform-ai",
+      "owner": "HMWKR",
+      "promptsUrl": "https://hmwkr.github.io/yt-longform-ai/prompts.json",
+      "metadata": {
+        "category": "application",
+        "status": "active",
+        "description": "해외 타겟 고수익 롱폼 유튜브 자동화 제작 플랫폼"
+      },
+      "cache": {
+        "promptCount": null,
+        "lastFetched": null
+      }
     }
   ],
   "summary": {
-    "totalProjects": 4,
+    "totalProjects": 5,
     "totalPromptsCached": null,
     "lastAggregated": null
   }

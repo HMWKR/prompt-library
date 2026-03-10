@@ -78,6 +78,10 @@
         "promptCount": null,
         "lastFetched": null
       }
+    },
+    {
+      "name": "dotclaude",
+      "repo": "HMWKR/dotclaude"
     }
   ],
   "summary": {

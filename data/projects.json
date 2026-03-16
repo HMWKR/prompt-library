@@ -82,6 +82,10 @@
     {
       "name": "dotclaude",
       "repo": "HMWKR/dotclaude"
+    },
+    {
+      "name": "prompt-library",
+      "repo": "HMWKR/prompt-library"
     }
   ],
   "summary": {

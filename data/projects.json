@@ -86,6 +86,10 @@
     {
       "name": "prompt-library",
       "repo": "HMWKR/prompt-library"
+    },
+    {
+      "name": "educycle-ai",
+      "repo": "HMWKR/educycle-ai"
     }
   ],
   "summary": {
